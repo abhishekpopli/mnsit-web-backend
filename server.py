@@ -4,8 +4,6 @@ from flask_cors import CORS
 from keras.models import load_model
 import numpy as np
 
-from test import testArr
-
 app = Flask(__name__)
 CORS(app)
 
@@ -38,9 +36,6 @@ def recognise():
     dataToSend = {"result": result}
     print(f'>>> Sending data {dataToSend}')
     return jsonify(dataToSend), statusCode
-
-
-# print(recogniseDigit(testArr))
 
 if __name__== '__main__':
     app.run()
