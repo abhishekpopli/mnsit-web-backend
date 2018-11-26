@@ -40,7 +40,7 @@ def recognise():
     return jsonify(dataToSend), statusCode
 
 
-print(recogniseDigit(testArr))
+# print(recogniseDigit(testArr))
 
 if __name__== '__main__':
     app.run()
