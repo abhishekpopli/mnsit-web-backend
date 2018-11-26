@@ -23,11 +23,6 @@ def recogniseDigit(arr):
 ##################################
 
 
-@app.route("/", methods=['GET', 'POST'])
-def home():
-    return "Home Page"
-
-
 @app.route("/recognise", methods=['POST'])
 def recognise():
     data = request.get_json().get('data', None)
@@ -41,6 +36,7 @@ def recognise():
         statusCode = 400
     
     dataToSend = {"result": result}
+    print(f'>>> Sending data {dataToSend}')
     return jsonify(dataToSend), statusCode
 
 
